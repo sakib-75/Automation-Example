@@ -15,13 +15,15 @@ public class NavigatePage extends BaseClass {
         CommonUtility.implicitWait(driver, 5);
 
         driver.navigate().to("http://www.google.com");
+
         Thread.sleep(1000);
         driver.navigate().back();
+
         Thread.sleep(1000);
         driver.navigate().forward();
+
         Thread.sleep(1000);
         driver.navigate().refresh();
-        Thread.sleep(1000);
 
     }
 

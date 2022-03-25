@@ -8,10 +8,10 @@ import utilities.CommonUtility;
 // Selection of Radio button and Check box in Frames:
 public class CheckBox_RadioButton extends BaseClass {
 
-    public static String baseUrl = "https://jqueryui.com/checkboxradio";
+    public String baseUrl = "https://jqueryui.com/checkboxradio";
 
     @Test
-    public static void CheckBoxAndRadioButtonInFrame() throws InterruptedException {
+    public void CheckBoxAndRadioButtonInFrame() {
 
         driver.get(baseUrl);
         CommonUtility.implicitWait(driver,5);

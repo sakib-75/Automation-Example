@@ -5,7 +5,8 @@ import org.testng.annotations.Test;
 import utilities.CommonUtility;
 
 public class Verify_Title_URL extends BaseClass {
-    public static String baseUrl = "http://automationpractice.com";
+
+    public String baseUrl = "http://automationpractice.com";
 
     @Test(priority = 1)
     public void verifyTitle() {

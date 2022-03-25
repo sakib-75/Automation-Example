@@ -9,10 +9,11 @@ import org.testng.annotations.Test;
 import utilities.CommonUtility;
 
 public class SelectDropDown extends BaseClass {
-    public static String baseUrl = "https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select_multiple";
+
+    public String baseUrl = "https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select_multiple";
 
     @Test
-    public static void selectingValueFromDropdown() throws InterruptedException {
+    public void selectingValueFromDropdown() {
 
         driver.get(baseUrl);
         CommonUtility.implicitWait(driver, 5);
