@@ -7,10 +7,11 @@ import org.testng.annotations.Test;
 import utilities.CommonUtility;
 
 public class DragAndDrop extends BaseClass {
-    public static String baseUrl = "https://jqueryui.com/droppable";
+
+    public String baseUrl = "https://jqueryui.com/droppable";
 
     @Test
-    public static void dragAndDropCheck() {
+    public void dragAndDropCheck() {
 
         driver.get(baseUrl);
         CommonUtility.implicitWait(driver, 5);
