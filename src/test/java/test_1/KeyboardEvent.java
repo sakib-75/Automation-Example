@@ -8,10 +8,10 @@ import org.testng.annotations.Test;
 import utilities.CommonUtility;
 
 public class KeyboardEvent extends BaseClass {
-    public static String baseUrl = "http://automationpractice.com/index.php";
+    public String baseUrl = "http://automationpractice.com/index.php";
 
     @Test
-    public static void KeyboardEventCheck() throws InterruptedException {
+    public void KeyboardEventCheck() throws InterruptedException {
 
         driver.get(baseUrl);
         CommonUtility.implicitWait(driver, 5);
