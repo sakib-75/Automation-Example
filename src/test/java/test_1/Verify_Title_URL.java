@@ -1,12 +1,8 @@
 package test_1;
 
 import base.BaseClass;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
-
-import Utility.CommonUtility;
+import utilities.CommonUtility;
 
 public class Verify_Title_URL extends BaseClass {
     public static String baseUrl = "http://automationpractice.com";

@@ -1,4 +1,4 @@
-package Utility;
+package utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -6,7 +6,6 @@ import org.testng.Assert;
 import java.time.Duration;
 
 public class CommonUtility {
-
     public static void implicitWait(WebDriver driver, int time) {
         // Implicit wait
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(time));
@@ -40,5 +39,6 @@ public class CommonUtility {
         // Assertions
         Assert.assertTrue(condition);
     }
+
 
 }
