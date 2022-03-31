@@ -30,12 +30,22 @@ public class SearchFlights extends BaseClass {
         selectCity(pom, going_to_city);
         Thread.sleep(1000);
 
-        // Select date
+        // Select departure date
         pom.departure_date().click();
-        String select_date = "12/04/2022";
-        selectDate(pom, select_date);
-
+        String select_date1 = "12/04/2022";
+        selectDate(pom, select_date1);
         Thread.sleep(1000);
+
+        // Select return date
+        pom.return_date().click();
+        String select_date2 = "16/04/2022";
+        selectDate(pom, select_date2);
+        Thread.sleep(1000);
+
+        pom.traveller_class().click();
+        pom.adults().click();
+        pom.senior_citizen().click();
+        pom.search_flights_btn().click();
 
     }
 
