@@ -40,7 +40,7 @@ public class SearchFlights extends BaseClass {
                 break;
             }
         }
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
     }
 
