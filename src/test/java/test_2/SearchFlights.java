@@ -32,9 +32,10 @@ public class SearchFlights extends BaseClass {
         Thread.sleep(1000);
 
         // Select date
-       pom.departure_date().click();
+        pom.departure_date().click();
+        String select_date = "12/04/2022";
         for (WebElement date : pom.all_date()) {
-            if (date.getAttribute("data-date").equals("12/04/2022")){
+            if (date.getAttribute("data-date").equals(select_date)) {
                 date.click();
                 break;
             }
