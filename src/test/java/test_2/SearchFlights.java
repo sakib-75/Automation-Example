@@ -1,12 +1,11 @@
 package test_2;
 
 import base.BaseClass;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-import utilities.CommonUtility;
 
-import java.util.List;
+import static utilities.CommonUtility.implicitWait;
+import static utilities.Test2Utility.selectCity;
+import static utilities.Test2Utility.selectDate;
 
 public class SearchFlights extends BaseClass {
 
@@ -17,7 +16,7 @@ public class SearchFlights extends BaseClass {
 
         HomePage_POM pom = new HomePage_POM(driver);
         driver.get(baseUrl);
-        CommonUtility.implicitWait(driver, 5);
+        implicitWait(driver, 5);
 
         // Select depart from
         pom.depart_from_inp().click();
@@ -34,23 +33,11 @@ public class SearchFlights extends BaseClass {
         // Select date
         pom.departure_date().click();
         String select_date = "12/04/2022";
-        for (WebElement date : pom.all_date()) {
-            if (date.getAttribute("data-date").equals(select_date)) {
-                date.click();
-                break;
-            }
-        }
+        selectDate(pom, select_date);
+
         Thread.sleep(1000);
 
     }
 
-    public static void selectCity(HomePage_POM pom, String city_name) {
-        for (WebElement city : pom.all_city()) {
-            if (city.getText().contains(city_name)) {
-                city.click();
-                break;
-            }
-        }
-    }
 
 }

@@ -24,6 +24,9 @@ public class HomePage_POM {
     @FindBy(xpath = "//input[@id='BE_flight_origin_date']")
     WebElement departure_date;
 
+    @FindBy(xpath = "//input[@id='BE_flight_arrival_date']")
+    WebElement return_date;
+
     @FindBy(xpath = "//div[@id='monthWrapper']//tbody//td[@class!='inActiveTd']")
     List<WebElement> all_date;
 
@@ -40,6 +43,10 @@ public class HomePage_POM {
 
     public WebElement departure_date(){
         return departure_date;
+    }
+
+    public WebElement return_date(){
+        return return_date;
     }
 
     public List<WebElement> all_date(){
