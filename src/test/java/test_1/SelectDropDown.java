@@ -23,6 +23,7 @@ public class SelectDropDown extends BaseClass {
         WebElement el = driver.findElement(By.name("cars"));
         Select s = new Select(el);
         s.selectByIndex(0);
+        // Multi select
         actions.keyDown(Keys.CONTROL)
                 .click(s.getOptions().get(3))
                 .click(s.getOptions().get(1))
