@@ -2,7 +2,6 @@ package test_2;
 
 import base.BaseClass;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import utilities.CommonUtility;
@@ -15,28 +14,37 @@ public class SearchFlights extends BaseClass {
 
     @Test
     public void searchFlights() throws InterruptedException {
+
+        HomePage_POM pom = new HomePage_POM(driver);
         driver.get(baseUrl);
         CommonUtility.implicitWait(driver, 5);
 
         // Select depart from
-        WebElement depart_from_inp = driver.findElement(By.xpath("//input[@id='BE_flight_origin_city']"));
-        depart_from_inp.click();
+        pom.depart_from_inp().click();
         String depart_city = "Chennai (MAA)";
-        selectCity(depart_city);
+        selectCity(pom, depart_city);
         Thread.sleep(1000);
 
         // Select going to
-        WebElement going_to_inp = driver.findElement(By.xpath("//input[@id='BE_flight_arrival_city']"));
-        going_to_inp.click();
+        pom.going_to_inp().click();
         String going_to_city = "Goa (GOI)";
-        selectCity(going_to_city);
+        selectCity(pom, going_to_city);
         Thread.sleep(1000);
+
+        // Select date
+       pom.departure_date().click();
+        for (WebElement date : pom.all_date()) {
+            if (date.getAttribute("data-date").equals("12/04/2022")){
+                date.click();
+                break;
+            }
+        }
+        Thread.sleep(3000);
 
     }
 
-    public static void selectCity(String city_name){
-        List<WebElement> all_city = driver.findElements(By.xpath("//div[@class='viewport']//div[1]/li"));
-        for (WebElement city : all_city) {
+    public static void selectCity(HomePage_POM pom, String city_name) {
+        for (WebElement city : pom.all_city()) {
             if (city.getText().contains(city_name)) {
                 city.click();
                 break;
