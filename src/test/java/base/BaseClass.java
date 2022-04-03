@@ -22,15 +22,16 @@ public class BaseClass {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(option);
 
-        driver.manage().window().maximize();
         // Create actions object
         actions = new Actions(driver);
+        driver.manage().window().maximize();
+        PageDriver.getInstance().setDriver(driver);
 
     }
 
     @AfterSuite
     public void endSession() {
-        driver.quit();
+        PageDriver.getCurrentDriver().quit();
     }
 
 }
