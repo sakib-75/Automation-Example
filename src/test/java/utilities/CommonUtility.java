@@ -1,5 +1,6 @@
 package utilities;
 
+import base.PageDriver;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
@@ -18,14 +19,9 @@ public class CommonUtility {
         Assert.assertEquals(actual, expected);
     }
 
-    public static void assertTrueUrl(WebDriver driver, String expectedUrl) {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    public static void assertTrueUrl(String expectedUrl) {
 
-        String currentUrl = driver.getCurrentUrl();
+        String currentUrl = PageDriver.getCurrentDriver().getCurrentUrl();
         boolean condition = currentUrl.contains(expectedUrl);
 
         System.out.println("Current URL: " + currentUrl);

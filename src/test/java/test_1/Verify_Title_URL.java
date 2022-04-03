@@ -20,7 +20,7 @@ public class Verify_Title_URL extends BaseClass {
     @Test(priority = 2)
     public void verifyUrl() {
         String expected_url = "automationpractice.com";
-        CommonUtility.assertTrueUrl(driver, expected_url);
+        CommonUtility.assertTrueUrl(expected_url);
 
     }
 

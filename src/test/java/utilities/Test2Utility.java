@@ -1,12 +1,13 @@
 package utilities;
 
 import org.openqa.selenium.WebElement;
-import test_2.HomePage_POM;
+
+import java.util.List;
 
 public class Test2Utility {
 
-    public static void selectCity(HomePage_POM pom, String city_name) {
-        for (WebElement city : pom.all_city()) {
+    public static void selectCity(List<WebElement> all_city, String city_name) {
+        for (WebElement city : all_city) {
             if (city.getText().contains(city_name)) {
                 city.click();
                 break;
@@ -14,8 +15,8 @@ public class Test2Utility {
         }
     }
 
-    public static void selectDate(HomePage_POM pom, String select_date) {
-        for (WebElement date : pom.all_date()) {
+    public static void selectDate(List<WebElement> all_date, String select_date) {
+        for (WebElement date : all_date) {
             if (date.getAttribute("data-date").equals(select_date)) {
                 date.click();
                 break;

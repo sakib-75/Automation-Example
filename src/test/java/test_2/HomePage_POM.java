@@ -1,11 +1,14 @@
 package test_2;
 
 import base.PageDriver;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
+
+import utilities.Test2Utility;
 
 public class HomePage_POM {
 
@@ -43,44 +46,35 @@ public class HomePage_POM {
     @FindBy(xpath = "(//input[@id='BE_flight_flsearch_btn'])[1]")
     WebElement search_flights_btn;
 
-    public WebElement depart_from_inp() {
-        return depart_from_inp;
+
+    @Step("Click on depart from input")
+    public void departFromClick() {
+        depart_from_inp.click();
     }
 
-    public WebElement going_to_inp() {
-        return going_to_inp;
+    @Step("Click on going to input")
+    public void goingToClick() {
+        going_to_inp.click();
     }
 
-    public WebElement departure_date() {
-        return departure_date;
+    @Step("Select specific city")
+    public void selectCity(String name) {
+        Test2Utility.selectCity(all_city, name);
     }
 
-    public WebElement return_date() {
-        return return_date;
+    @Step("Click on departure date")
+    public void departureDateClick() {
+        departure_date.click();
     }
 
-    public List<WebElement> all_date() {
-        return all_date;
+    @Step("Click on return date")
+    public void returnDateClick() {
+        return_date.click();
     }
 
-    public List<WebElement> all_city() {
-        return all_city;
-    }
-
-    public WebElement traveller_class() {
-        return traveller_class;
-    }
-
-    public WebElement adults() {
-        return adults;
-    }
-
-    public WebElement senior_citizen() {
-        return senior_citizen;
-    }
-
-    public WebElement search_flights_btn() {
-        return search_flights_btn;
+    @Step("Select date")
+    public void selectDate(String date) {
+        Test2Utility.selectDate(all_date, date);
     }
 
 }
