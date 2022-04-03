@@ -1,6 +1,8 @@
 package test_2;
 
 import base.BaseClass;
+import base.PageDriver;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import static utilities.CommonUtility.implicitWait;
@@ -14,9 +16,10 @@ public class SearchFlights extends BaseClass {
     @Test
     public void searchFlights() throws InterruptedException {
 
-        HomePage_POM pom = new HomePage_POM(driver);
+        WebDriver driver = PageDriver.getCurrentDriver();
         driver.get(baseUrl);
         implicitWait(driver, 5);
+        HomePage_POM pom = new HomePage_POM();
 
         // Select depart from
         pom.depart_from_inp().click();

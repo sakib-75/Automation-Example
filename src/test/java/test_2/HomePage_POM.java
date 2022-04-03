@@ -1,6 +1,6 @@
 package test_2;
 
-import org.openqa.selenium.WebDriver;
+import base.PageDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -9,11 +9,8 @@ import java.util.List;
 
 public class HomePage_POM {
 
-    WebDriver driver;
-
-    public HomePage_POM(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+    public HomePage_POM() {
+        PageFactory.initElements(PageDriver.getCurrentDriver(), this);
     }
 
     @FindBy(xpath = "//input[@id='BE_flight_origin_city']")
