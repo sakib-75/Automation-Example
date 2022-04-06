@@ -8,6 +8,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import java.time.Duration;
+
 public class BaseClass {
 
     public static WebDriver driver;
@@ -25,6 +27,7 @@ public class BaseClass {
         // Create actions object
         actions = new Actions(driver);
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         PageDriver.getInstance().setDriver(driver);
 
     }

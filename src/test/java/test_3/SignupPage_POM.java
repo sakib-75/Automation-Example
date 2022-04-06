@@ -31,7 +31,7 @@ public class SignupPage_POM {
     WebElement signupBtn;
 
     @Step("Set name, email and password input")
-    public void signup(String name, String email, String password) {
+    public void signupInfo(String name, String email, String password) {
         sendText(nameInput, name);
         sendText(emailInput, email);
         sendText(passwordInput, password);
@@ -41,6 +41,12 @@ public class SignupPage_POM {
 
     public void signupButtonClick() {
         signupBtn.click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        screenshotForAllure("After signup button click");
     }
 
 
