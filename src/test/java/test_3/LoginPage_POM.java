@@ -24,15 +24,28 @@ public class LoginPage_POM {
     @FindBy(xpath = "//button[normalize-space()='LOGIN']")
     WebElement loginBtn;
 
+    @FindBy(xpath = "//a[normalize-space()='Sign out']")
+    WebElement logoutBtn;
+
     @Step("Provide an Email & Password input")
-    public void login(String email, String password) {
+    public void loginInfo(String email, String password) {
         sendText(emailInput, email);
         sendText(passwordInput, password);
         screenshotForAllure("Login information");
     }
 
-    public void loginButtonClick() {
+    public void loginSubmit() {
         loginBtn.click();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        screenshotForAllure("After login button click");
+    }
+
+    public void logout() {
+        logoutBtn.click();
     }
 
 

@@ -39,10 +39,10 @@ public class SignupPage_POM {
         screenshotForAllure("Signup information");
     }
 
-    public void signupButtonClick() {
+    public void signupSubmit() {
         signupBtn.click();
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

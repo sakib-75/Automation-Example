@@ -15,7 +15,7 @@ public class HomePage_POM {
     @FindBy(xpath = "//a[normalize-space()='Sign up']")
     WebElement signupButton;
 
-    @FindBy(xpath = "//a[normalize-space()='Sign up']")
+    @FindBy(xpath = "//a[normalize-space()='Log in']")
     WebElement loginButton;
 
     @Step("Click on signup button")
