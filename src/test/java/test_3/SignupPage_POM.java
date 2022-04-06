@@ -24,13 +24,23 @@ public class SignupPage_POM {
     @FindBy(xpath = "//input[@id='pass']")
     WebElement passwordInput;
 
+    @FindBy(xpath = "//input[@id='agree']")
+    WebElement agree;
+
+    @FindBy(xpath = "//button[normalize-space()='SIGN UP']")
+    WebElement signupBtn;
+
     @Step("Set name, email and password input")
-    public void setNameInput(String name, String email, String password) {
+    public void signup(String name, String email, String password) {
         sendText(nameInput, name);
         sendText(emailInput, email);
         sendText(passwordInput, password);
+        agree.click();
         screenshotForAllure("Signup information");
+    }
 
+    public void signupButtonClick() {
+        signupBtn.click();
     }
 
 
