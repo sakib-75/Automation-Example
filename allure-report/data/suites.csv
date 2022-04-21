@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Apr 21 20:35:16 BDT 2022","Thu Apr 21 20:35:22 BDT 2022","5812","Default Suite","Automation-Practice-2","test_4.TC01_LoginAndCheckout","test_4.TC01_LoginAndCheckout","loginAndCheckout","loginAndCheckout",""

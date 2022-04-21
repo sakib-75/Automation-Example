@@ -1,0 +1,11 @@
+[ {
+  "uid" : "5bfdbbdcf101e354",
+  "name" : "loginAndCheckout",
+  "time" : {
+    "start" : 1650551716325,
+    "stop" : 1650551722137,
+    "duration" : 5812
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
