@@ -28,5 +28,5 @@ public class loginPage_POM {
         sendText(passwordInput, password);
         loginButton.click();
     }
-    
+
 }
