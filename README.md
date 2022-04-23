@@ -15,11 +15,12 @@ Test automation project with Selenium, Java, TestNG, Maven
 
 
 ### This project covers the following tools:
-1. Java
-2. Maven
-3. Selenium
-4. TestNG
-5. Page Object Model
-6. Data-Driven
-7. Page Factory
-8. Allure Report
+1. Programming Language: **Java**
+2. Build Management Tools: **Apache Maven**
+3. Automation Framework Tools:
+   - **Selenium**
+   - **TestNG**
+   - **Page Object Model**
+   - **Data Provider**
+   - **Page Factory**
+   - **Allure Report**
