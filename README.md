@@ -20,7 +20,7 @@ Test automation project with Selenium, Java, TestNG, Maven
 3. Automation Framework Tools:
    - **Selenium**
    - **TestNG**
-   - **Page Object Model**
    - **Data Provider**
    - **Page Factory**
+   - **Page Object Model**
    - **Allure Report**
