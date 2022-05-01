@@ -34,13 +34,13 @@ public class SearchFlights extends BaseClass {
 
         // Select departure date
         home.departureDateClick();
-        String departure_date = "12/04/2022";
+        String departure_date = "12/05/2022";
         home.selectDate(departure_date);
         Thread.sleep(1000);
 
         // Select return date
         home.returnDateClick();
-        String return_date = "16/04/2022";
+        String return_date = "16/05/2022";
         home.selectDate(return_date);
         Thread.sleep(1000);
 
