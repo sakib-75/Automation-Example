@@ -1,7 +1,6 @@
 package test_4;
 
 import base.PageDriver;
-import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -20,7 +19,6 @@ public class CheckoutStepTwo_POM {
     @FindBy(xpath = "//button[@id='cancel']")
     WebElement cancelButton;
 
-    @Step("Finish order")
     public void finishOder() {
         scrollToElement(finishButton);
         finishButton.click();

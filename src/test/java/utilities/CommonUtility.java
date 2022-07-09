@@ -1,13 +1,10 @@
 package utilities;
 
 import base.PageDriver;
-import io.qameta.allure.Allure;
-import io.qameta.allure.Step;
 import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.*;
 import org.testng.Assert;
 
-import java.io.ByteArrayInputStream;
 import java.time.Duration;
 
 public class CommonUtility {
@@ -48,14 +45,6 @@ public class CommonUtility {
     public static void scrollToElement(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) PageDriver.getCurrentDriver();
         js.executeScript("arguments[0].scrollIntoView(true);", element);
-    }
-
-    // Take a screenshot for full view port and attest to allure report
-    @Step("Taking a screenshot for {0}")
-    public static void screenshotForAllure(String name) {
-        Allure.addAttachment(name, new ByteArrayInputStream(((TakesScreenshot) PageDriver.getCurrentDriver())
-                .getScreenshotAs(OutputType.BYTES))
-        );
     }
 
 

@@ -1,7 +1,6 @@
 package test_2;
 
 import base.PageDriver;
-import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -47,32 +46,26 @@ public class HomePage_POM {
     WebElement search_flights_btn;
 
 
-    @Step("Click on depart from input")
     public void departFromClick() {
         depart_from_inp.click();
     }
 
-    @Step("Click on going to input")
     public void goingToClick() {
         going_to_inp.click();
     }
 
-    @Step("Select specific city")
     public void selectCity(String name) {
         Test2Utility.selectCity(all_city, name);
     }
 
-    @Step("Click on departure date")
     public void departureDateClick() {
         departure_date.click();
     }
 
-    @Step("Click on return date")
     public void returnDateClick() {
         return_date.click();
     }
 
-    @Step("Select date")
     public void selectDate(String date) {
         Test2Utility.selectDate(all_date, date);
     }

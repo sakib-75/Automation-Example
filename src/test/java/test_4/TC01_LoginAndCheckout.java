@@ -5,7 +5,6 @@ import base.PageDriver;
 import org.testng.annotations.Test;
 
 import static utilities.CommonUtility.assertTrueUrl;
-import static utilities.CommonUtility.screenshotForAllure;
 
 public class TC01_LoginAndCheckout extends BaseClass {
 
@@ -20,19 +19,18 @@ public class TC01_LoginAndCheckout extends BaseClass {
 
         PageDriver.getCurrentDriver().get("https://www.saucedemo.com/");
 
-        login_page.login("standard_user","secret_sauce");
+        login_page.login("standard_user", "secret_sauce");
         assertTrueUrl("https://www.saucedemo.com/inventory.html");
 
-        int[] product_list = {1,3,2};
-        for(int i=0; i<3; i++){
+        int[] product_list = {1, 3, 2};
+        for (int i = 0; i < 3; i++) {
             inventory_page.addToCartButton.get(product_list[i]).click();
         }
         inventory_page.cartButton.click();
-        screenshotForAllure("Cart page overview");
         Thread.sleep(2000);
         cart_page.checkoutButton.click();
 
-        checkout_page1.checkoutStepOne("Sakibul","Islam","1230");
+        checkout_page1.checkoutStepOne("Sakibul", "Islam", "1230");
 
         Thread.sleep(2000);
         checkout_page2.finishOder();

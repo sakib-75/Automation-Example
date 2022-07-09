@@ -1,10 +1,10 @@
 package test_4;
 
 import base.PageDriver;
-import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
 import static utilities.CommonUtility.*;
 
 public class loginPage_POM {
@@ -22,8 +22,7 @@ public class loginPage_POM {
     @FindBy(id = "login-button")
     WebElement loginButton;
 
-    @Step("Login user")
-    public void login(String user_name, String password){
+    public void login(String user_name, String password) {
         sendText(userNameInput, user_name);
         sendText(passwordInput, password);
         loginButton.click();
