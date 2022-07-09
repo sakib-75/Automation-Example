@@ -12,6 +12,7 @@ Test automation project with Selenium, Java, TestNG, Maven
 8. Select dropdown
 9. Slider
 10. Verify title, URL
+11. File Upload
 
 
 ### This project covers the following tools:
@@ -23,4 +24,3 @@ Test automation project with Selenium, Java, TestNG, Maven
    - **Data Provider**
    - **Page Factory**
    - **Page Object Model**
-   - **Allure Report**
