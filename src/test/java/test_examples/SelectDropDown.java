@@ -1,4 +1,4 @@
-package test_1;
+package test_examples;
 
 import base.BaseClass;
 import org.openqa.selenium.By;
