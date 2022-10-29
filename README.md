@@ -24,6 +24,7 @@ Test automation project with Selenium, Java, TestNG, Maven
    - **Data Provider**
    - **Page Factory**
    - **Page Object Model**
+   - **Apache POI**
 
 
 Get dependency of `poi-ooxml` from here https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
