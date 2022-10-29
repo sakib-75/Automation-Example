@@ -21,10 +21,10 @@ public class ReadExcelData {
             System.out.println("");
         }
 
-        Object allData = excelReader.getAllData();
-        System.out.println(Arrays.deepToString((Object[]) allData));
+        System.out.println(Arrays.deepToString(excelReader.getAllData()));
 
-
+        System.out.println("Total row: " + excelReader.getRowCount());
+        System.out.println("Total column: " + excelReader.getColumnCount());
 
 
     }
