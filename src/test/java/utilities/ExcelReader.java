@@ -27,19 +27,21 @@ public class ExcelReader {
     }
 
     public int getColumnCount() {
-        return sheet.getRow(0).getPhysicalNumberOfCells();
+        return sheet.getRow(0).getLastCellNum() - 1;
     }
 
-    public Object getCellData(int rowIndex, int colIndex) {
+    public String getCellData(int rowIndex, int colIndex) {
         DataFormatter formatter = new DataFormatter();
-        return formatter.formatCellValue(sheet.getRow(rowIndex).getCell(colIndex));
+        Object dataFormatter = formatter.formatCellValue(sheet.getRow(rowIndex).getCell(colIndex));
+        return dataFormatter.toString();
     }
 
-    public Object getAllData() {
-        Object[][] allData = new Object[getRowCount()][getColumnCount()];
-        for (int row = 0; row < getRowCount(); row++) {
+    public Object[][] getAllData() {
+        int rowCountWithoutHeader = getRowCount() - 1;
+        Object[][] allData = new Object[rowCountWithoutHeader][getColumnCount()];
+        for (int row = 0; row < rowCountWithoutHeader; row++) {
             for (int column = 0; column < getColumnCount(); column++) {
-                allData[row][column] = getCellData(row,column);
+                allData[row][column] = getCellData(row + 1, column);
             }
         }
         return allData;
