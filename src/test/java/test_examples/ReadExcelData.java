@@ -3,6 +3,8 @@ package test_examples;
 import org.testng.annotations.Test;
 import utilities.ExcelReader;
 
+import java.util.Arrays;
+
 
 public class ReadExcelData {
     @Test
@@ -18,6 +20,12 @@ public class ReadExcelData {
             }
             System.out.println("");
         }
+
+        Object allData = excelReader.getAllData();
+        System.out.println(Arrays.deepToString((Object[]) allData));
+
+
+
 
     }
 
