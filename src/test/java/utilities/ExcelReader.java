@@ -35,4 +35,14 @@ public class ExcelReader {
         return formatter.formatCellValue(sheet.getRow(rowIndex).getCell(colIndex));
     }
 
+    public Object getAllData() {
+        Object[][] allData = new Object[getRowCount()][getColumnCount()];
+        for (int row = 0; row < getRowCount(); row++) {
+            for (int column = 0; column < getColumnCount(); column++) {
+                allData[row][column] = getCellData(row,column);
+            }
+        }
+        return allData;
+    }
+
 }
